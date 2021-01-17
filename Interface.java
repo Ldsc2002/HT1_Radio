@@ -10,6 +10,7 @@ Autores: Estudiantes de la Seccion 30
 
 // Interface (Interface)
 public interface Interface {
+
     public boolean encenderApagar();
     public boolean amFm();
     public String guardar(int btn);

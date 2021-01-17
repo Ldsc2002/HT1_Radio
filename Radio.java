@@ -14,6 +14,14 @@ Implementacion de la interfaz (Interface)
 
 public class Radio implements Interface {
 
+    // Atributos
+    //TODO
+
+    //Cosntructor
+    public Radio(){
+        //TODO
+    }
+    
     @Override
     public boolean encenderApagar() {
         // TODO Auto-generated method stub
