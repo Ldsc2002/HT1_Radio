@@ -15,23 +15,45 @@ Implementacion de la interfaz (Interface)
 public class Radio implements Interface {
 
     // Atributos
-    //TODO
+    private int[] fm; // simula los botones de la emisora fm
+    private int[] am; // simula los botones de la emisora am
+    private boolean emisora; // true = am | false = fm
+    private boolean estado; // Guarda el estado del radio | true = encendido, false = apagado
 
     //Cosntructor
     public Radio(){
-        //TODO
+        this.fm = new int[12];
+        this.am = new int[12];
+        this.estado = false;
+        this.emisora = true;
     }
     
     @Override
     public boolean encenderApagar() {
-        // TODO Auto-generated method stub
-        return false;
+        boolean temp = cambio(this.estado);
+        this.estado = temp;
+        return temp;
     }
 
     @Override
     public boolean amFm() {
-        // TODO Auto-generated method stub
-        return false;
+        boolean temp = cambio(this.emisora);
+        this.emisora = temp;
+        return temp;
+    }
+
+    // cambia el estado del parametro state de true a false o biceversa y devuelve su nuevo valor
+    private boolean cambio(boolean state){
+
+        boolean temp;
+        if (state){
+            temp = false;
+
+        } else {
+            temp = true;
+        }
+
+        return temp;
     }
 
     @Override

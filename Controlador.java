@@ -32,11 +32,11 @@ public class Controlador {
 
             // Encender/Apagar
             if (opcion == 1){
-                //TODO
+                v.encenderApagar(rad.encenderApagar());
 
             // Am/Fm
             } else if (opcion == 2){
-                //TODO
+                v.amFm(rad.amFm());
 
             // Guardar
             } else if (opcion == 3){

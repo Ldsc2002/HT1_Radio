@@ -89,9 +89,37 @@ public class Vista {
         temp += "\n1. Encender/Apagar";
         temp += "\n2. Cambiar Am/Fm";
         temp += "\n3. guardar estacion";
-        temp += "\n4. Seleccionar";
+        temp += "\n4. Seleccionar emisora guardada";
         temp += "\n5. Avanzar";
         temp += "\n6. Salir\n\n";
         return temp;
+    }
+
+    public void encenderApagar(boolean estado){
+        String temp;
+
+        if (estado){
+            temp = "Encendido";
+
+        } else {
+            temp = "Apagado";
+        }
+
+        line();
+        print("El radio ahora esta " + temp);
+    }
+
+    public void amFm(boolean emisora){
+        String temp;
+
+        if (emisora){
+            temp = "Am";
+
+        } else {
+            temp = "Fm";
+        }
+
+        line();
+        print("Ha cambiado a radio " + temp);
     }
 }
