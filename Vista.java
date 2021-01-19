@@ -6,7 +6,7 @@ Vista.java
 Autores: 
 -Luis Santos: 20226
 -Diego Cordova: 20212
-Última fecha de modificaión: 2021-01-16
+Última fecha de modificaión: 2021-01-19
 
 Clase Vista
 Clase que interactua con el usuario
