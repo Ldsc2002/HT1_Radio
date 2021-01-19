@@ -46,6 +46,7 @@ public class Vista {
 
     // Mensaje de bienvenida
     public void hola() {
+        line();
         print("Bienvenido a la Radio UVG!!!");
     }
 
@@ -121,5 +122,37 @@ public class Vista {
 
         line();
         print("Ha cambiado a radio " + temp);
+    }
+
+    private String boton(){
+        return "\n\n[1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12]\n";
+    }
+
+    public String seleccionar_menu(){
+        return "\nSeleccione un boton para sintonizar la estacion correspondiente" + boton();
+    }
+
+    public String guardar_menu(){
+        return "En que boton guardara la estacion? (1 - 12)" + boton();
+    }
+
+    public void guardar(String btn, double estacion){
+        line();
+        print("Se ha guardado la estacion: " + estacion + " en el boton: " + btn + "\n");
+    }
+
+    public void seleccionar(String estacion){        
+        line();
+        if (estacion.equals("")){
+            print("El boton seleccionado no contiene ninguna estacion guardada\n");
+
+        } else{
+            print("Usted esta sintonizando la estacion: " + estacion + "\n");
+        }
+    }   
+
+    public void avanzar(double estacion){
+        line();
+        print("Usted esta sintonizando la estacion: " + estacion + "\n");
     }
 }

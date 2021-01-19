@@ -40,15 +40,15 @@ public class Controlador {
 
             // Guardar
             } else if (opcion == 3){
-                //TODO
+                v.guardar(rad.guardar(v.input(v.guardar_menu(), 12)), rad.getEstacion());
 
             // Seleccionar
             } else if (opcion == 4){
-                //TODO
+                v.seleccionar(rad.seleccionar(v.input(v.seleccionar_menu(), 12)));
 
             // Avanzar
             } else if (opcion == 5){
-                //TODO
+                v.avanzar(rad.avanzar());
 
             // Salir
             } else if (opcion == 6){
