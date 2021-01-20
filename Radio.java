@@ -55,26 +55,10 @@ public class Radio implements Interface {
 
     @Override
     public String guardar(int btn) {
-        boolean check = true;
-
         if (emisora == true) {
-            while (check) {
-                for (int i = 0; i < memoriaAM.length; i++) {
-                    if (memoriaAM[i] == 0) {
-                        memoriaAM[i] = estacion;
-                        check = false;
-                    }
-                }
-            }
-        } else {
-            while (check) {
-                for (int i = 0; i < memoriaFM.length; i++) {
-                    if (memoriaFM[i] == 0) {
-                        memoriaFM[i] = estacion;
-                        check = false;
-                    }
-                }
-            }
+            memoriaAM[btn - 1] = estacion;
+        } else {    
+            memoriaFM[btn - 1] = estacion;
         }
 
         return String.valueOf(estacion);
@@ -82,8 +66,12 @@ public class Radio implements Interface {
 
     @Override
     public String seleccionar(int btn) {
-        // TODO Auto-generated method stub
-        return null;
+        if (emisora == true) {
+            estacion = memoriaAM[btn - 1];
+        } else {    
+            estacion = memoriaFM[btn - 1];
+        }
+        return String.valueOf(estacion);
     }
 
     @Override
