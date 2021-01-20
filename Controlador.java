@@ -36,7 +36,7 @@ public class Controlador {
                 estado = rad.encenderApagar();
                 v.encenderApagar(estado);
 
-            } else if (opcion != 1 && estado) {
+            } else if (opcion != 1 && estado && opcion != 6) {
                 // Am/Fm
                 if (opcion == 2){
                     v.amFm(rad.amFm());
@@ -53,11 +53,13 @@ public class Controlador {
                 } else if (opcion == 5){
                     estacionActual = rad.avanzar();
                     v.avanzar(estacionActual);
-
-                // Salir
-                } else if (opcion == 6){
-                    menu_p = false;
                 }
+
+            } else if ( opcion == 6){
+                menu_p = false;
+            
+            } else if (opcion !=1 && estado == false && opcion != 6){
+                v.apagado();
             }
         }
         v.bye(); // Mensaje de Despedida

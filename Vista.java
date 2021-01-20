@@ -155,4 +155,9 @@ public class Vista {
         line();
         print("Usted esta sintonizando la estacion: " + estacion + "\n");
     }
+
+    public void apagado(){
+        line();
+        print("La radio esta apgada\nEnceiendela para utilizar esta funcion");
+    }
 }
