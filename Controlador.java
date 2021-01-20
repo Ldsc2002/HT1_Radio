@@ -40,7 +40,7 @@ public class Controlador {
 
             // Guardar
             } else if (opcion == 3){
-                v.guardar(rad.guardar(v.input(v.guardar_menu(), 12)), estacionActual);
+                v.guardar(rad.guardar(v.input(v.guardar_menu(), 12)));
 
             // Seleccionar
             } else if (opcion == 4){

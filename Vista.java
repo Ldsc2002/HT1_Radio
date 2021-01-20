@@ -136,9 +136,9 @@ public class Vista {
         return "En que boton guardara la estacion? (1 - 12)" + boton();
     }
 
-    public void guardar(String btn, double estacion){
+    public void guardar(String estacion){
         line();
-        print("Se ha guardado la estacion: " + estacion + " en el boton: " + btn + "\n");
+        print("Se ha guardado la estacion: " + estacion);
     }
 
     public void seleccionar(String estacion){        
