@@ -55,9 +55,11 @@ public class Controlador {
                     v.avanzar(estacionActual);
                 }
 
+            // salir
             } else if ( opcion == 6){
                 menu_p = false;
             
+            // Si el usuario quiere utilizar funciones de la radio y este esta apagado
             } else if (opcion !=1 && estado == false && opcion != 6){
                 v.apagado();
             }
