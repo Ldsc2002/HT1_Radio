@@ -19,6 +19,7 @@ public class Controlador {
     private static Radio rad = new Radio(); // Instancia de Clase Radio
     private static Vista v = new Vista(); // Instancia de clase Vista
     private static double estacionActual = 0;
+    private static boolean estado;
     // Inicio del programa
     public static void main(String[] args) {
         
@@ -32,28 +33,31 @@ public class Controlador {
 
             // Encender/Apagar
             if (opcion == 1){
-                v.encenderApagar(rad.encenderApagar());
+                estado = rad.encenderApagar();
+                v.encenderApagar(estado);
 
-            // Am/Fm
-            } else if (opcion == 2){
-                v.amFm(rad.amFm());
+            } else if (opcion != 1 && estado) {
+                // Am/Fm
+                if (opcion == 2){
+                    v.amFm(rad.amFm());
 
-            // Guardar
-            } else if (opcion == 3){
-                v.guardar(rad.guardar(v.input(v.guardar_menu(), 12)));
+                // Guardar
+                } else if (opcion == 3){
+                    v.guardar(rad.guardar(v.input(v.guardar_menu(), 12)));
 
-            // Seleccionar
-            } else if (opcion == 4){
-                v.seleccionar(rad.seleccionar(v.input(v.seleccionar_menu(), 12)));
+                // Seleccionar
+                } else if (opcion == 4){
+                    v.seleccionar(rad.seleccionar(v.input(v.seleccionar_menu(), 12)));
 
-            // Avanzar
-            } else if (opcion == 5){
-                estacionActual = rad.avanzar();
-                v.avanzar(estacionActual);
+                // Avanzar
+                } else if (opcion == 5){
+                    estacionActual = rad.avanzar();
+                    v.avanzar(estacionActual);
 
-            // Salir
-            } else if (opcion == 6){
-                menu_p = false;
+                // Salir
+                } else if (opcion == 6){
+                    menu_p = false;
+                }
             }
         }
         v.bye(); // Mensaje de Despedida
