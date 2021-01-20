@@ -18,6 +18,8 @@ public class Radio implements Interface {
     private boolean emisora; // true = am | false = fm
     private boolean estado; // Guarda el estado del radio | true = encendido, false = apagado
     private double estacion; // Guarda la estacion de radio que se esta sintonizando
+    private double[] memoriaAM = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private double[] memoriaFM = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     //Cosntructor
     public Radio(){
@@ -53,8 +55,29 @@ public class Radio implements Interface {
 
     @Override
     public String guardar(int btn) {
-        // TODO Auto-generated method stub
-        return null;
+        boolean check = true;
+
+        if (emisora == true) {
+            while (check) {
+                for (int i = 0; i < memoriaAM.length; i++) {
+                    if (memoriaAM[i] == 0) {
+                        memoriaAM[i] = estacion;
+                        check = false;
+                    }
+                }
+            }
+        } else {
+            while (check) {
+                for (int i = 0; i < memoriaFM.length; i++) {
+                    if (memoriaFM[i] == 0) {
+                        memoriaFM[i] = estacion;
+                        check = false;
+                    }
+                }
+            }
+        }
+
+        return String.valueOf(estacion);
     }
 
     @Override
