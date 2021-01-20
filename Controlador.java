@@ -18,7 +18,7 @@ public class Controlador {
     //Atribnutos
     private static Radio rad = new Radio(); // Instancia de Clase Radio
     private static Vista v = new Vista(); // Instancia de clase Vista
-
+    private static double estacionActual = 0;
     // Inicio del programa
     public static void main(String[] args) {
         
@@ -40,7 +40,7 @@ public class Controlador {
 
             // Guardar
             } else if (opcion == 3){
-                v.guardar(rad.guardar(v.input(v.guardar_menu(), 12)), rad.getEstacion());
+                v.guardar(rad.guardar(v.input(v.guardar_menu(), 12)), estacionActual);
 
             // Seleccionar
             } else if (opcion == 4){
@@ -48,7 +48,8 @@ public class Controlador {
 
             // Avanzar
             } else if (opcion == 5){
-                v.avanzar(rad.avanzar());
+                estacionActual = rad.avanzar();
+                v.avanzar(estacionActual);
 
             // Salir
             } else if (opcion == 6){

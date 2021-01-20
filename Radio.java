@@ -27,12 +27,28 @@ public class Radio implements Interface {
     
     @Override
     public boolean encenderApagar() {
-        return false;
+        if (estado == false) {
+            estado = true;
+            return true;
+        }
+        else {
+            estado = false;
+            return false;
+        }
     }
 
     @Override
     public boolean amFm() {
-        return false;
+        if (emisora == false) {
+            emisora = true;
+            estacion = 530;
+            return true;
+        }
+        else {
+            emisora = false;
+            estacion = 87.9;
+            return false;
+        }
     }
 
     @Override
@@ -49,12 +65,17 @@ public class Radio implements Interface {
 
     @Override
     public double avanzar() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-    
-    // Getter de estacion
-    public double getEstacion() {
+        if (emisora == true) {
+            estacion = estacion + 10;
+            if (estacion == 1620) {
+                estacion = 530;
+            }
+        } else {
+            estacion = estacion + 0.2;
+            if (estacion == 108.1) {
+                estacion = 107.9;
+            }
+        }
         return estacion;
     }
 }
