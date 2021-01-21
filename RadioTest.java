@@ -1,3 +1,16 @@
+/********************************************************
+Universidad del Valle de Guatemala
+Algoritmos y Estructuras de Datos
+Profesor: Moises Gonzales
+RadioTest.java
+Autores: 
+-Luis Santos: 20226
+-Diego Cordova: 20212
+Última fecha de modificaión: 2021-01-21
+
+Pruebas unitoarias de clase Radio
+********************************************************/
+
 import static org.junit.Assert.*;  
 import org.junit.*;
     

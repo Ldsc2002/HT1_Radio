@@ -6,7 +6,7 @@ Controlador.java
 Autores: 
 -Luis Santos: 20226
 -Diego Cordova: 20212
-Última fecha de modificaión: 2021-01-19
+Última fecha de modificaión: 2021-01-20
 
 Clase controlador
 Driver program
