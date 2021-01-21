@@ -96,12 +96,15 @@ public class Vista {
         return temp;
     }
 
+    // Imprime el comportamiento del  radio cuando se enciende o apaga
     public void encenderApagar(boolean estado){
         String temp;
 
+        // Si elradio esta encendido
         if (estado){
             temp = "Encendido";
 
+        // Si el radio esta apagado
         } else {
             temp = "Apagado";
         }
@@ -110,12 +113,15 @@ public class Vista {
         print("El radio ahora esta " + temp);
     }
 
+    // imprime el comportamiento del radio cuando se cambia de am,fm
     public void amFm(boolean emisora){
         String temp;
 
+        // Si el radio esta en Am
         if (emisora){
             temp = "Am";
 
+        // Si el radio esta en Fm
         } else {
             temp = "Fm";
         }
@@ -124,38 +130,48 @@ public class Vista {
         print("Ha cambiado a radio " + temp);
     }
 
+    // devuelve representacion grafica de los botones (estetica)
     private String boton(){
         return "\n\n[1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12]\n";
     }
 
+    // devuelve el menu de seleccionar estacion
     public String seleccionar_menu(){
         return "\nSeleccione un boton para sintonizar la estacion correspondiente" + boton();
     }
 
+    // devueve el menu de guardar estacion
     public String guardar_menu(){
-        return "En que boton guardara la estacion? (1 - 12)" + boton();
+        return "En que boton guardara la estacion?" + boton();
     }
 
+    // Imprime el comportamiento del radio cuando se guarda una estacion
     public void guardar(String estacion){
         line();
         print("Se ha guardado la estacion: " + estacion);
     }
 
+    // imprime el comportamiento del radio cuando se selecciona una estacion
     public void seleccionar(String estacion){        
         line();
+
+        // Si no hay estacion guardada en el boton seleccionado
         if (estacion.equals("")){
             print("El boton seleccionado no contiene ninguna estacion guardada\n");
 
+        // Si hay estacion guardada en el boton seleccionado
         } else{
             print("Usted esta sintonizando la estacion: " + estacion + "\n");
         }
     }   
 
+    // Imprime el comportamiento del raio cuando se avanza
     public void avanzar(double estacion){
         line();
         print("Usted esta sintonizando la estacion: " + estacion + "\n");
     }
 
+    // Mensaje de radio apagado
     public void apagado(){
         line();
         print("La radio esta apgada\nEnceiendela para utilizar esta funcion");

@@ -23,8 +23,8 @@ public class Radio implements Interface {
 
     //Cosntructor
     public Radio(){
-        this.estado = false;
-        this.emisora = true;
+        this.estado = false; // EL radio inicia estando apagado
+        this.emisora = true; // El raio inicia en Am
     }
     
     @Override
