@@ -89,7 +89,7 @@ public class Vista {
         temp = "\n-----Seleccione una opcion-----";
         temp += "\n1. Encender/Apagar";
         temp += "\n2. Cambiar Am/Fm";
-        temp += "\n3. guardar estacion";
+        temp += "\n3. Guardar estación";
         temp += "\n4. Seleccionar emisora guardada";
         temp += "\n5. Avanzar";
         temp += "\n6. Salir\n\n";
@@ -174,6 +174,6 @@ public class Vista {
     // Mensaje de radio apagado
     public void apagado(){
         line();
-        print("La radio esta apgada\nEnceiendela para utilizar esta funcion");
+        print("La radio esta apagada\nEnciendela para utilizar esta función");
     }
 }
