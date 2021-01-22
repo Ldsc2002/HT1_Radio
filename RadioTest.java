@@ -27,11 +27,11 @@ public class RadioTest {
     @Test
     public void seleccionarConMemoria(){
         String estacion_num = String.valueOf(rad.avanzar()); // Se guarda la estacion actual en una variable
-        rad.guardar(1); // Se guarda la estacion actual en el boton 1
+        rad.guardar(1); // Se guarda la estacion actual en un boton
         rad.avanzar();
         rad.avanzar();
         rad.avanzar();
-        String output = rad.seleccionar(1); // Se selecciona el boton 1 y se guarda el output en una variable
+        String output = rad.seleccionar(1); // Se selecciona un boton y se guarda el output en una variable
         assertEquals(estacion_num, output); // Se compara la estacion actual con la estacion 
     }
 
@@ -58,8 +58,7 @@ public class RadioTest {
 
     @Test
     public void apagar(){
-        
-        rad.encenderApagar();
+        rad.encenderApagar(); // Se enciende el radio
         boolean output = rad.encenderApagar(); // Se gaurda el estado resultante
         assertEquals(false, output); // Se compara la respuesta esperada con la obtenida
     }
@@ -67,7 +66,7 @@ public class RadioTest {
     @Test
     public void guardar(){
         String estacion = String.valueOf(rad.avanzar()); // Se guarda la estacion actual
-        String output = rad.guardar(1); // Se guarda la estacion guardada
+        String output = rad.guardar(1); // Se guarda la estacion en el boton 13 (inexistente)
         assertEquals(estacion, output); // Se compara la respuesta esperada con la obtenida
     }
 }
